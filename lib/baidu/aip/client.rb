@@ -123,7 +123,7 @@ module Baidu::Aip
     end
 
     def face_search(image, image_type, options = {})
-      aip = Face::Match.new options.merge(image: image, image_type: image_type)
+      aip = Face::Search.new options.merge(image: image, image_type: image_type)
       aip.client = self
       aip.process
     end
